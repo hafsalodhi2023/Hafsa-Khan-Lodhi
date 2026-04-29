@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hamza Khan Lodhi Full Stack Developer</title>
+    <title>Hafsa Khan Lodhi</title>
     <!-- Font Awesome 6 (free) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
@@ -17,29 +17,27 @@
             font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         }
 
-        body {
-            background-color: #0a0c0f;
-            color: #e2e8f0;
-            line-height: 1.6;
-            scroll-behavior: smooth;
-        }
-
-        /* smooth scroll + animation base */
         html {
             scroll-behavior: smooth;
         }
 
+        body {
+            background: #0b0614;
+            color: #f3e8ff;
+            line-height: 1.6;
+        }
+
         .container {
             max-width: 1200px;
-            margin: 0 auto;
+            margin: auto;
             padding: 0 2rem;
         }
 
-        /* REUSABLE ANIMATIONS (fade-up, fade-in) */
+        /* animations */
         .fade-up {
             opacity: 0;
             transform: translateY(30px);
-            animation: fadeUp 0.8s ease forwards;
+            animation: fadeUp .8s ease forwards;
         }
 
         .fade-in {
@@ -60,38 +58,37 @@
             }
         }
 
-        /* delay helpers */
         .delay-1 {
-            animation-delay: 0.2s;
+            animation-delay: .2s;
         }
 
         .delay-2 {
-            animation-delay: 0.4s;
+            animation-delay: .4s;
         }
 
         .delay-3 {
-            animation-delay: 0.6s;
+            animation-delay: .6s;
         }
 
         .delay-4 {
-            animation-delay: 0.8s;
+            animation-delay: .8s;
         }
 
-        /* header / nav */
+        /* navbar */
         .navbar {
             padding: 1.5rem 0;
             display: flex;
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
-            border-bottom: 1px solid #1e293b;
+            border-bottom: 1px solid #2a1f45;
         }
 
         .logo {
             font-size: 1.8rem;
             font-weight: 700;
-            letter-spacing: -0.5px;
-            background: linear-gradient(130deg, #94a3b8, #5eead4);
+            letter-spacing: -.5px;
+            background: linear-gradient(130deg, #f5d0fe, #c084fc, #8b5cf6);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -102,18 +99,18 @@
         }
 
         .nav-links a {
-            color: #cbd5e1;
+            color: #d8b4fe;
             text-decoration: none;
             font-weight: 500;
-            transition: color 0.2s;
+            transition: .25s;
             font-size: 1.1rem;
         }
 
         .nav-links a:hover {
-            color: #5eead4;
+            color: #ffffff;
         }
 
-        /* hero section (with your image) */
+        /* hero */
         .hero {
             display: flex;
             align-items: center;
@@ -127,63 +124,57 @@
             flex: 1 1 300px;
         }
 
-        .hero-content .greet {
+        .greet {
             font-size: 1.2rem;
-            color: #94a3b8;
-            margin-bottom: 0.5rem;
+            color: #c4b5fd;
+            margin-bottom: .5rem;
         }
 
         .hero-content h1 {
             font-size: 3.2rem;
             font-weight: 700;
             line-height: 1.2;
-            background: linear-gradient(to right, #f0f9ff, #b6e3f0, #5eead4);
+            margin-bottom: 1.2rem;
+            background: linear-gradient(to right, #faf5ff, #d8b4fe, #8b5cf6);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            margin-bottom: 1.2rem;
         }
 
-        .hero-content .tagline {
+        .tagline {
             font-size: 1.4rem;
-            color: #cbd5e1;
+            color: #e9d5ff;
             margin-bottom: 1.8rem;
-            border-left: 4px solid #2dd4bf;
+            border-left: 4px solid #8b5cf6;
             padding-left: 1.5rem;
         }
 
         .hero-desc {
-            color: #9ca3af;
+            color: #d6bcfa;
             max-width: 550px;
             margin-bottom: 2rem;
-            font-size: 1.1rem;
+            font-size: 1.08rem;
         }
 
         .hero-image {
             flex: 0 0 280px;
             border-radius: 30px;
             overflow: hidden;
-            box-shadow: 0 25px 40px -10px rgba(0, 255, 200, 0.2);
-            border: 3px solid #2dd4bf40;
-            transition: transform 0.3s ease, box-shadow 0.3s;
+            border: 3px solid rgba(139, 92, 246, .25);
+            box-shadow: 0 25px 40px -10px rgba(139, 92, 246, .35);
+            transition: .3s;
         }
 
         .hero-image:hover {
             transform: scale(1.02);
-            box-shadow: 0 30px 50px -10px #2dd4bf80;
+            box-shadow: 0 30px 50px -10px rgba(168, 85, 247, .65);
         }
 
         .hero-image img {
             width: 100%;
-            height: auto;
             display: block;
-            background: #1e293b;
-            /* fallback, replace with your actual image */
+            object-fit: cover;
+            object-position: top;
         }
-
-        /* if image is missing, we put a placeholder with your name initial — but you'll replace with real image */
-        /* .hero-image img {
-            content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%231e293b'/%3E%3Ctext x='20' y='68' fill='%235eead4' font-size='42' font-weight='bold' font-family='Arial'%3EHK%3C/text%3E%3C/svg%3E");
-        } */
 
         /* buttons */
         .btn-group {
@@ -193,40 +184,39 @@
         }
 
         .btn {
-            padding: 0.8rem 2rem;
+            padding: .8rem 2rem;
             border-radius: 40px;
             font-weight: 600;
             text-decoration: none;
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            transition: 0.25s;
-            border: 1px solid transparent;
+            transition: .25s;
         }
 
         .btn-primary {
-            background: #2dd4bf;
-            color: #0a0c0f;
-            box-shadow: 0 8px 20px -8px #2dd4bf;
+            background: #8b5cf6;
+            color: #fff;
+            box-shadow: 0 8px 20px -8px rgba(139, 92, 246, .8);
         }
 
         .btn-primary:hover {
-            background: #5eead4;
+            background: #a855f7;
             transform: translateY(-4px);
         }
 
         .btn-outline {
-            border-color: #334155;
-            color: #e2e8f0;
+            border: 1px solid #3b2a5c;
+            color: #f3e8ff;
         }
 
         .btn-outline:hover {
-            border-color: #2dd4bf;
-            color: #2dd4bf;
+            border-color: #8b5cf6;
+            color: #c084fc;
             transform: translateY(-4px);
         }
 
-        /* section headings */
+        /* headings */
         .section-heading {
             font-size: 2.2rem;
             font-weight: 600;
@@ -235,162 +225,147 @@
             display: inline-block;
         }
 
-        .section-heading:after {
+        .section-heading::after {
             content: '';
             position: absolute;
             bottom: -10px;
             left: 0;
             width: 70%;
             height: 4px;
-            background: linear-gradient(90deg, #2dd4bf, #0a0c0f);
             border-radius: 4px;
+            background: linear-gradient(90deg, #8b5cf6, #0b0614);
         }
 
-        /* what i do / cards */
-        .services-grid {
+        /* cards */
+        .services-grid,
+        .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 2rem;
+        }
+
+        .services-grid {
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             margin: 2rem 0;
         }
 
-        .service-card {
-            background: #13171d;
-            padding: 2rem 1.5rem;
-            border-radius: 24px;
-            border: 1px solid #262f3b;
-            transition: all 0.3s;
-        }
-
-        .service-card:hover {
-            border-color: #2dd4bf;
-            transform: translateY(-8px);
-            box-shadow: 0 20px 30px -15px #0f181e;
-        }
-
-        .service-card i {
-            font-size: 2.3rem;
-            color: #2dd4bf;
-            margin-bottom: 1.2rem;
-        }
-
-        .service-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 0.8rem;
-        }
-
-        .service-card p {
-            color: #9aa9b9;
-        }
-
-        /* tech stack chips WITH ICONS */
-        .tech-cloud {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.8rem 1rem;
-            margin: 2rem 0 1rem;
-        }
-
-        .tech-chip {
-            background: #1e293b;
-            padding: 0.5rem 1.4rem 0.5rem 1.2rem;
-            border-radius: 40px;
-            font-size: 1rem;
-            font-weight: 500;
-            color: #b4c6e0;
-            border: 1px solid #334155;
-            transition: 0.2s;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .tech-chip i {
-            color: #2dd4bf;
-            font-size: 1.1rem;
-            width: 1.2rem;
-            text-align: center;
-        }
-
-        .tech-chip:hover {
-            border-color: #2dd4bf;
-            color: #e2e8f0;
-            transform: scale(1.02);
-        }
-
-        /* projects grid */
         .projects-grid {
-            display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 2rem;
             margin: 2.5rem 0;
         }
 
+        .service-card,
         .project-card {
-            background: #13171d;
+            background: #140d22;
+            padding: 2rem 1.5rem;
+            border-radius: 24px;
+            border: 1px solid #2f214d;
+            transition: .3s;
+        }
+
+        .project-card {
             border-radius: 28px;
             padding: 1.8rem 1.5rem;
-            border: 1px solid #2a3440;
-            transition: 0.2s;
         }
 
-        .project-card-links-div {
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
+        .service-card:hover,
         .project-card:hover {
-            border: 1px solid #2dd4bf;
-            transform: translateY(-5px);
+            border-color: #8b5cf6;
+            transform: translateY(-8px);
+            box-shadow: 0 20px 30px -15px rgba(139, 92, 246, .18);
         }
 
+        .service-card i,
         .project-icon {
-            font-size: 2.2rem;
-            color: #2dd4bf;
+            font-size: 2.3rem;
+            color: #a855f7;
             margin-bottom: 1rem;
         }
 
+        .service-card h3,
         .project-card h3 {
-            font-size: 1.3rem;
-            font-weight: 600;
+            font-size: 1.35rem;
+            margin-bottom: .7rem;
         }
 
+        .service-card p,
+        .project-card p {
+            color: #d2bdf2;
+        }
+
+        /* tech chips */
+        .tech-cloud {
+            display: flex;
+            flex-wrap: wrap;
+            gap: .8rem 1rem;
+            margin: 2rem 0;
+        }
+
+        .tech-chip {
+            background: #1a102b;
+            padding: .5rem 1.4rem .5rem 1.2rem;
+            border-radius: 40px;
+            font-size: 1rem;
+            font-weight: 500;
+            color: #f3e8ff;
+            border: 1px solid #3b2a5c;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: .25s;
+        }
+
+        .tech-chip i {
+            color: #a855f7;
+        }
+
+        .tech-chip:hover {
+            border-color: #8b5cf6;
+            transform: scale(1.03);
+        }
+
+        /* tags */
         .project-tags {
             display: flex;
             flex-wrap: wrap;
-            gap: 0.5rem;
+            gap: .5rem;
             margin: 1rem 0 1.2rem;
         }
 
         .project-tags span {
-            background: #1e293b;
-            padding: 0.2rem 1rem;
+            background: #1a102b;
+            color: #d8b4fe;
+            padding: .2rem 1rem;
             border-radius: 20px;
-            font-size: 0.8rem;
-            color: #a1b5cd;
+            font-size: .8rem;
         }
 
         .project-link {
-            color: #2dd4bf;
+            color: #c084fc;
             text-decoration: none;
-            font-weight: 500;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.4rem;
+            font-weight: 600;
         }
 
-        /* footer / contact */
+        .project-card-links-div {
+            display: flex;
+            justify-content: space-between;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        /* footer */
         .footer {
             margin-top: 5rem;
             padding: 2.5rem 0;
-            border-top: 1px solid #1e293b;
+            border-top: 1px solid #2a1f45;
             display: flex;
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
             gap: 1.5rem;
+        }
+
+        .copyright {
+            color: #b9a8d6;
         }
 
         .social-links {
@@ -399,22 +374,19 @@
         }
 
         .social-links a {
-            color: #94a3b8;
+            color: #c4b5fd;
             font-size: 1.8rem;
-            transition: 0.2s;
+            transition: .25s;
         }
 
         .social-links a:hover {
-            color: #2dd4bf;
+            color: #ffffff;
             transform: translateY(-4px);
         }
 
-        .copyright {
-            color: #5f6c80;
-        }
+        /* mobile */
+        @media(max-width:700px) {
 
-        /* responsiveness */
-        @media (max-width: 700px) {
             .hero {
                 flex-direction: column-reverse;
                 text-align: center;
@@ -424,14 +396,13 @@
                 font-size: 2.6rem;
             }
 
-            .hero-content .tagline {
+            .tagline {
                 border-left: none;
+                border-top: 2px solid #8b5cf6;
                 padding-left: 0;
-                border-top: 2px solid #2dd4bf;
                 padding-top: 1rem;
                 max-width: 90%;
-                margin-left: auto;
-                margin-right: auto;
+                margin: auto;
             }
 
             .btn-group {
@@ -444,7 +415,9 @@
             }
 
             .nav-links {
-                gap: 1.5rem;
+                gap: 1.2rem;
+                flex-wrap: wrap;
+                justify-content: center;
             }
 
             .footer {
@@ -453,27 +426,11 @@
             }
         }
 
-        /* extra smoothness */
         .hero-image,
         .btn,
         .service-card,
         .project-card {
             will-change: transform;
-        }
-
-        /* image real replacement — put your actual photo URL inside src */
-        .profile-real {
-            width: 100%;
-            height: auto;
-            aspect-ratio: 1/1;
-            object-fit: cover;
-            background: #1e2a36;
-        }
-
-        /* fake image fallback: if you don't change src, you'll see "HK", but you must replace */
-        .hero-image img {
-            width: 100%;
-            display: block;
         }
     </style>
 </head>
@@ -482,7 +439,7 @@
     <div class="container">
         <!-- navigation: "Work" link removed -->
         <nav class="navbar fade-in">
-            <span class="logo">Hamza Lodhi</span>
+            <span class="logo">Hafsa Lodhi</span>
             <div class="nav-links">
                 <a href="#home">Home</a>
                 <a href="#projects">Projects</a>
@@ -494,18 +451,19 @@
         <!-- HERO section with your image (replace the image src) -->
         <section id="home" class="hero">
             <div class="hero-content fade-up">
-                <div class="greet">👋 Hi, I'm</div>
-                <h1>Hamza Khan Lodhi</h1>
+                <div class="greet">Hi, I'm</div>
+                <h1>Hafsa Khan Lodhi</h1>
                 <div class="tagline">Full Stack MERN Developer</div>
                 <p class="hero-desc">
-                    I’m a passionate Frontend Developer who enjoys building modern and responsive web applications using
-                    React JS,
-                    JavaScript, and Tailwind CSS. I have hands-on experience working with authentication systems, API
-                    integration, and state
-                    management in real-world projects. I care about writing clean, efficient code and creating smooth
-                    user experiences
-                    across devices. As a self-driven learner, I’m always exploring new tools and improving my skills to
-                    grow as a developer.
+                    Full Stack Developer with 3 years of hands-on experience building personal and practice-based web
+                    applications using
+                    modern technologies. Skilled in developing responsive frontends with React.js and creating secure,
+                    scalable backend
+                    systems with Node.js, Express.js, MongoDB, and MySQL. Experienced in API development,
+                    authentication, database
+                    management, and VPS server deployment. Passionate about clean code, problem-solving, and
+                    continuously learning new tools
+                    to build efficient, user-friendly digital products.
                 </p>
                 <div class="btn-group">
                     <a href="./Hamza-Khan-Lodhi-Resume.pdf" target="_blank" class="btn btn-primary"><i
@@ -515,7 +473,7 @@
             </div>
             <div class="hero-image fade-up delay-1">
                 <!-- REPLACE THE src with your actual image (e.g., ./hamza.jpg or link) -->
-                <img src="./hamza.png" alt="Hamza Khan Lodhi" class="profile-real">
+                <img src="./hafsa.png" alt="Hamza Khan Lodhi" class="profile-real">
                 <!-- suggestion: replace src with your real photo URL -->
             </div>
         </section>
@@ -527,23 +485,30 @@
         <div class="services-grid">
             <div class="service-card fade-up delay-1">
                 <i class="fas fa-paint-brush"></i>
-                <h3>Frontend magic</h3>
-                <p>React, Tailwind, GSAP, Framer Motion, Locomotive, AOS — pixel perfect & buttery animations.</p>
+                <h3>Frontend Development</h3>
+                <p>Modern UI development using React and Tailwind CSS to build
+                    responsive, accessible, and smooth user experiences with attention to detail.</p>
             </div>
+        
             <div class="service-card fade-up delay-2">
                 <i class="fas fa-server"></i>
-                <h3>Backend power</h3>
-                <p>Node.js, Express, REST APIs, JWT, bcrypt, rate limiting, clean MVC.</p>
+                <h3>Backend Development</h3>
+                <p>Building scalable and secure server-side applications using Node.js, Express, and REST APIs with
+                    authentication systems like JWT, bcrypt, and clean MVC architecture.</p>
             </div>
+        
             <div class="service-card fade-up delay-3">
                 <i class="fas fa-database"></i>
-                <h3>Database design</h3>
-                <p>MongoDB + Mongoose, MySQL, Prisma, Drizzle ORM, schema validation with Zod.</p>
+                <h3>Database Design</h3>
+                <p>Designing efficient and structured databases using MongoDB with Mongoose, MySQL, Prisma, and Drizzle ORM
+                    along with schema validation using Zod.</p>
             </div>
+        
             <div class="service-card fade-up delay-4">
                 <i class="fas fa-cloud-upload-alt"></i>
-                <h3>Deployment & more</h3>
-                <p>Netlify, Hostinger VPS, Git, Postman, security with Helmet, CORS.</p>
+                <h3>Deployment & Dev Tools</h3>
+                <p>Deploying applications on Hostinger VPS with Linux server management, along with Git, Postman, and security
+                    practices like Helmet and CORS configuration.</p>
             </div>
         </div>
 
@@ -553,28 +518,39 @@
         </div>
 
         <div class="tech-cloud fade-up delay-1">
+            <span class="tech-chip"><i class="fab fa-html5"></i> HTML5</span>
+            <span class="tech-chip"><i class="fab fa-css3-alt"></i> CSS3</span>
+            <span class="tech-chip"><i class="fab fa-js"></i> JavaScript</span>
             <span class="tech-chip"><i class="fab fa-react"></i> React</span>
-            <span class="tech-chip"><i class="fas fa-code"></i> Tailwind</span>
-            <span class="tech-chip"><i class="fas fa-bolt"></i> GSAP</span>
-            <span class="tech-chip"><i class="fas fa-magic"></i> Framer Motion</span>
-            <span class="tech-chip"><i class="fas fa-train"></i> Locomotive JS</span>
-            <span class="tech-chip"><i class="fas fa-eye"></i> AOS</span>
+            <span class="tech-chip"><i class="fas fa-wind"></i> Tailwind CSS</span>
             <span class="tech-chip"><i class="fas fa-layer-group"></i> Redux Toolkit</span>
             <span class="tech-chip"><i class="fas fa-database"></i> React Query</span>
-            <span class="tech-chip"><i class="fab fa-node"></i> Node.js</span>
-            <span class="tech-chip"><i class="fas fa-bolt"></i> Express</span>
+
+            <span class="tech-chip"><i class="fab fa-node-js"></i> Node.js</span>
+            <span class="tech-chip"><i class="fas fa-server"></i> Express.js</span>
+            <span class="tech-chip"><i class="fas fa-plug"></i> REST API</span>
+            <span class="tech-chip"><i class="fas fa-lock"></i> JWT</span>
+            <span class="tech-chip"><i class="fas fa-shield-alt"></i> bcrypt</span>
+            <span class="tech-chip"><i class="fas fa-check-circle"></i> Zod</span>
+            <span class="tech-chip"><i class="fas fa-hard-hat"></i> Helmet</span>
+            <span class="tech-chip"><i class="fas fa-globe"></i> CORS</span>
+
             <span class="tech-chip"><i class="fas fa-leaf"></i> MongoDB</span>
-            <span class="tech-chip"><i class="fa-solid fa-layer-group"></i> Mongoose</span>
+            <span class="tech-chip"><i class="fas fa-layer-group"></i> Mongoose</span>
             <span class="tech-chip"><i class="fas fa-database"></i> MySQL</span>
             <span class="tech-chip"><i class="fas fa-arrow-right"></i> Prisma</span>
-            <span class="tech-chip"><i class="fas fa-arrow-right"></i> Drizzle</span>
-            <span class="tech-chip"><i class="fas fa-lock"></i> JWT</span>
-            <span class="tech-chip"><i class="fas fa-shield"></i> bcrypt</span>
-            <span class="tech-chip"><i class="fas fa-check-circle"></i> Zod</span>
-            <span class="tech-chip"><i class="fas fa-shield-alt"></i> Helmet</span>
-            <span class="tech-chip"><i class="fas fa-globe"></i> CORS</span>
+            <span class="tech-chip"><i class="fas fa-arrow-right"></i> Drizzle ORM</span>
+
             <span class="tech-chip"><i class="fab fa-git-alt"></i> Git</span>
+            <span class="tech-chip"><i class="fab fa-github"></i> GitHub</span>
             <span class="tech-chip"><i class="fas fa-paper-plane"></i> Postman</span>
+            <span class="tech-chip"><i class="fas fa-code"></i> VS Code</span>
+            <span class="tech-chip"><i class="fab fa-linux"></i> Linux</span>
+
+            <span class="tech-chip"><i class="fas fa-cloud"></i> VPS Hosting</span>
+            <span class="tech-chip"><i class="fas fa-server"></i> Hostinger VPS</span>
+            <span class="tech-chip"><i class="fas fa-sync"></i> PM2</span>
+            <span class="tech-chip"><i class="fas fa-network-wired"></i> Nginx</span>
         </div>
 
         <!-- featured projects -->
@@ -609,50 +585,22 @@
                     <a href="https://shopppy.vercel.app/" target="_blank" class="project-link">view <i
                             class="fas fa-arrow-right"></i></a>
                 </div>
-                <div class="project-card fade-up delay-4">
-                    <div class="project-icon"><i class="fas fa-clone"></i></div>
-                    <h3>Ochi clone (Desktop version)</h3>
-                    <div class="project-tags"><span>Tailwind</span><span>GSAP</span></div>
-                    <p>Pixel-perfect clone with advanced animations.</p>
-                    <a href="https://reactwebsiteproject2.netlify.app/" target="_blank" class="project-link">view <i
-                            class="fas fa-arrow-right"></i></a>
-                </div>
-                <div class="project-card fade-up delay-1">
-                    <div class="project-icon"><i class="fas fa-file-alt"></i></div>
-                    <h3>Docs App</h3>
-                    <div class="project-tags"><span>MERN</span><span>Framer Motion</span></div>
-                    <p>Animated document.</p>
-                    <a href="https://master--docsappreact.netlify.app/" target="_blank" class="project-link">view <i
-                            class="fas fa-arrow-right"></i></a>
-                </div>
-                <div class="project-card fade-up delay-2">
-                    <div class="project-icon"><i class="fa-solid fa-feather-pointed"></i></div>
-                    <h3>Pokemon</h3>
-                    <div class="project-tags"><span>API</span><span>React</span></div>
-                    <p>Pokémon explorer with modern animations.</p>
-                    <a href="https://letscatchpikachu.netlify.app/" target="_blank" class="project-link">view <i
-                            class="fas fa-arrow-right"></i></a>
-                </div>
+
             </div>
         </section>
 
         <!-- footer / contact -->
         <footer id="contact" class="footer">
             <div class="copyright">
-                <i class="far fa-copyright"></i> 2026 Hamza Khan Lodhi
+                <i class="far fa-copyright"></i> 2026 Hafsa Khan Lodhi
             </div>
             <div class="social-links">
-                <a href="https://wa.me/923273622257?text=Hi%20I%20want%20to%20discuss%20a%20project" target="_blank"
-                    aria-label="WhatsApp">
-                    <i class="fa-brands fa-whatsapp"></i>
-                </a>
-                <a href="https://github.com/hamzalodhi2023" target="_blank" aria-label="GitHub"><i
+
+                <a href="https://github.com/hafsalodhi2023" target="_blank" aria-label="GitHub"><i
                         class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/hamzakhanlodhi/" target="_blank" aria-label="LinkedIn"><i
-                        class="fab fa-linkedin-in"></i></a>
-                <a href="https://x.com/HamzaLodhi2023" target="_blank" aria-label="Twitter"><i
+                <a href="https://x.com/hafsalodhi2023" target="_blank" aria-label="Twitter"><i
                         class="fab fa-x-twitter"></i></a>
-                <a href="mailto:hamzalodhi2023@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                <a href="mailto:hafsalodhi2023@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
             </div>
         </footer>
     </div>
